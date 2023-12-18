@@ -25,6 +25,7 @@ Current Month display Calendar Format Xpath
     ClickText                   Do not consent
     Log                         ${for30Day}
     ClickText                   //table[@id\='datepickers']//input[@id\='first_date_picker']                        # click datepicker text box and populate the calender
+    ${calheader}=               GetText                        //div[@class\='ui-datepicker-title']//span
     ClickText                   //table[@class\='ui-datepicker-calendar']//a[text()\='${for30Day}']                 # select the date from the table
     Sleep                       3s
     ${selectedMon}=             GetInputValue               //input[@id\='first_date_picker']                       # After selected the date , fetch the selected date from input field
