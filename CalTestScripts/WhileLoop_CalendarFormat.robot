@@ -32,12 +32,12 @@ Current Month display Calendar Format Xpath
     Log                  ${calhdrmonyr}
     WHILE                '${calhdrmonyr}'!='March 2025'
         Log              ${calhdrmonyr}
+        ClickText        //table[@class\='ui-datepicker-calendar']//a[text()\='${for30Day}']
         ClickText        //table[@id\='datepickers']//input[@id\='first_date_picker']
         ClickText        //a[@class\='ui-datepicker-next ui-corner-all']//span[@class\='ui-icon ui-icon-circle-triangle-e']
         ${calheadermon}=                             GetText                     //div[@class\='ui-datepicker-title']//span[@class\='ui-datepicker-month']
         ${calheaderyear}=                            GetText                     //div[@class\='ui-datepicker-title']//span[@class\='ui-datepicker-year']
         ${calhdrmonyr}=                              Set Variable                ${calheadermon} ${calheaderyear}
-        ClickText        //table[@class\='ui-datepicker-calendar']//a[text()\='${for30Day}']
         Log              ${calhdrmonyr}
     END
     ClickText            //table[@class\='ui-datepicker-calendar']//a[text()\='${for30Day}']                 # select the date from the table
