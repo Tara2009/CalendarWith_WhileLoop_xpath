@@ -27,7 +27,7 @@ Current Month display Calendar Format Xpath
     ClickText            //table[@id\='datepickers']//input[@id\='first_date_picker']                        # click datepicker text box and populate the calender
     ${calheadermon}=     GetText                     //div[@class\='ui-datepicker-title']//span[@class\='ui-datepicker-month']
     ${calheaderyear}=    GetText                     //div[@class\='ui-datepicker-title']//span[@class\='ui-datepicker-year']
-    ${calhdrmonyr}=      Set Variable                ${calheadermon}' '${calheaderyear}    # &nbsp;$
+    ${calhdrmonyr}=      Set Variable                ${calheadermon} ${calheaderyear}    # &nbsp;$
     Log                  ${calhdrmonyr}
     ClickText            //table[@class\='ui-datepicker-calendar']//a[text()\='${for30Day}']                 # select the date from the table
     Sleep                3s
