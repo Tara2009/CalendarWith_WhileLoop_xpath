@@ -33,7 +33,8 @@ Current Month display Calendar Format Xpath
     WHILE                '${calhdrmonyr}'!='March 2024'
         Log              ${calhdrmonyr}
         #ClickText        //a[@class\='ui-datepicker-next ui-corner-all']
-        ClickText        //a[@class\='ui-datepicker-next ui-corner-all']//span[@class\='ui-icon ui-icon-circle-triangle-e']
+        #ClickText        //a[@class\='ui-datepicker-next ui-corner-all']//span[@class\='ui-icon ui-icon-circle-triangle-e']
+        ClickIcon        //a[@class\='ui-datepicker-next ui-corner-all']//span[@class\='ui-icon ui-icon-circle-triangle-e']
         ${calheadermon}=                             GetText                     //div[@class\='ui-datepicker-title']//span[@class\='ui-datepicker-month']
         ${calheaderyear}=                            GetText                     //div[@class\='ui-datepicker-title']//span[@class\='ui-datepicker-year']
         ${calhdrmonyr}=                              Set Variable                ${calheadermon} ${calheaderyear}    # &nbsp;$
