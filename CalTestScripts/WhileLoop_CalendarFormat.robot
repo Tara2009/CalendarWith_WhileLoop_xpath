@@ -34,10 +34,10 @@ Current Month display Calendar Format Xpath
         Log              ${calhdrmonyr}
         #ClickText       //a[@class\='ui-datepicker-next ui-corner-all']
         #ClickText       //a[@class\='ui-datepicker-next ui-corner-all']//span[@class\='ui-icon ui-icon-circle-triangle-e']
-        ClickText        //a[@class\='ui-datepicker-next ui-corner-all']//span[@class\='ui-icon ui-icon-circle-triangle-e']
+        ClickItemWhile                               //a[@class\='ui-datepicker-next ui-corner-all']//span[@class\='ui-icon ui-icon-circle-triangle-e']
         ${calheadermon}=                             GetText                     //div[@class\='ui-datepicker-title']//span[@class\='ui-datepicker-month']
         ${calheaderyear}=                            GetText                     //div[@class\='ui-datepicker-title']//span[@class\='ui-datepicker-year']
-        ${calhdrmonyr}=                              Set Variable                ${calheadermon} ${calheaderyear}    # &nbsp;$
+        ${calhdrmonyr}=                              Set Variable                ${calheadermon} ${calheaderyear}
         Log              ${calhdrmonyr}
     END
     ClickText            //table[@class\='ui-datepicker-calendar']//a[text()\='${for30Day}']                 # select the date from the table
