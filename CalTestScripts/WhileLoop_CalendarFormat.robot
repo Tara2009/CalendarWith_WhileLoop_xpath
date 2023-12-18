@@ -61,7 +61,7 @@ Current To Previous Month display Calendar Format Xpath
         Log              ${calhdrmonyr}
         ClickText        //table[@class\='ui-datepicker-calendar']//a[text()\='${for30Day}']
         ClickText        //table[@id\='datepickers']//input[@id\='first_date_picker']
-        ClickText        //a[@class\='ui-datepicker-prev ui-corner-all']//span[@class\='ui-icon ui-icon-circle-triangle-e']
+        ClickText        //a[@class\='ui-datepicker-prev ui-corner-all']//span[@class\='ui-icon ui-icon-circle-triangle-w']
         ${calheadermon}=                             GetText                     //div[@class\='ui-datepicker-title']//span[@class\='ui-datepicker-month']
         ${calheaderyear}=                            GetText                     //div[@class\='ui-datepicker-title']//span[@class\='ui-datepicker-year']
         ${calhdrmonyr}=                              Set Variable                ${calheadermon} ${calheaderyear}
