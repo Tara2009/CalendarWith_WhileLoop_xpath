@@ -20,7 +20,7 @@ ${DropYear}=             2015
 *** Test Cases ***
 Current To Next Month display Calendar Format Xpath
     [Tags]               commitment
-    [Documentation]      Current Month calendar display month. In this calendar if current month starts with Tuesday, previous month sunday and monday cells will display emtpy, like that current months ends with friday, next month values i.e saturday will display empth.
+    [Documentation]      Display current Month. System will click Next month button and select the date.
     Appstate             Home
     ClickText            Do not consent
     Log                  ${for30Day}
@@ -48,9 +48,8 @@ Current To Next Month display Calendar Format Xpath
     #Sleep               3s
 Current To Previous Month display Calendar Format Xpath
     [Tags]               commitment
-    [Documentation]      Current Month calendar display month. In this calendar if current month starts with Tuesday, previous month sunday and monday cells will display emtpy, like that current months ends with friday, next month values i.e saturday will display empth.
+    [Documentation]      Display current Month. System will click previous month button and select the date.
     Appstate             Home
-    ClickText            Do not consent
     Log                  ${for30Day}
     ClickText            //table[@id\='datepickers']//input[@id\='first_date_picker']                        # click datepicker text box and populate the calender
     ${calheadermon}=     GetText                     //div[@class\='ui-datepicker-title']//span[@class\='ui-datepicker-month']
