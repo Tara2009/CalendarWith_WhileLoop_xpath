@@ -31,14 +31,14 @@ Current Month display Calendar Format Xpath
     #${calhdrmonyr}=     Set Variable                //div[@class\='ui-datepicker-title']//span[@class\='ui-datepicker-month'] //div[@class\='ui-datepicker-title']//span[@class\='ui-datepicker-year']
     Log                  ${calhdrmonyr}
     WHILE                '${calhdrmonyr}'!='March 2024'
-    #Log                 ${calhdrmonyr}
-    #ClickText           //a[@class\='ui-datepicker-next ui-corner-all']
-    #ClickText           //a[@class\='ui-datepicker-next ui-corner-all']//span[@class\='ui-icon ui-icon-circle-triangle-e']
+        Log              ${calhdrmonyr}
+        #ClickText       //a[@class\='ui-datepicker-next ui-corner-all']
+        #ClickText       //a[@class\='ui-datepicker-next ui-corner-all']//span[@class\='ui-icon ui-icon-circle-triangle-e']
         ClickText        //a[@class\='ui-datepicker-next ui-corner-all']//span[@class\='ui-icon ui-icon-circle-triangle-e']
         ${calheadermon}=                             GetText                     //div[@class\='ui-datepicker-title']//span[@class\='ui-datepicker-month']
         ${calheaderyear}=                            GetText                     //div[@class\='ui-datepicker-title']//span[@class\='ui-datepicker-year']
         ${calhdrmonyr}=                              Set Variable                ${calheadermon} ${calheaderyear}    # &nbsp;$
-        #Log             ${calhdrmonyr}
+        Log              ${calhdrmonyr}
     END
     ClickText            //table[@class\='ui-datepicker-calendar']//a[text()\='${for30Day}']                 # select the date from the table
     Sleep                3s
