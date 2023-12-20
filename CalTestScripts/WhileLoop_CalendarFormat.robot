@@ -76,6 +76,6 @@ Current To Previous Month display Calendar Format Xpath
 Get RecordCount from the Table
     [Tags]    GRecCount
     [Documentation]        Get the Record count from the table
-    ${TableRecCount}=      GetElementCount    //table[@id='contactList']//tr
+    ${TableRecCount}=      GetElementCount    //table[@id\='contactList']//tr
     Log                    Table Record count : ${TableRecCount}    
     #//table[@id\='contactList']//tr
