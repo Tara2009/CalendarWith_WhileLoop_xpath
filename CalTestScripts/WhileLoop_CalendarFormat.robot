@@ -72,3 +72,10 @@ Current To Previous Month display Calendar Format Xpath
     ${selectedMon}=      GetInputValue               //input[@id\='first_date_picker']                       # After selected the date , fetch the selected date from input field
     Sleep                3s
     Log                  'Only Enable Calender Value : ' ${selectedMon}
+
+Get RecordCount from the Table
+    [Tags]    GRecCount
+    [Documentation]        Get the Record count from the table
+    ${TableRecCount}=      GetElementCount    //table[@id='contactList']//tr
+    Log                    Table Record count : ${TableRecCount}    
+    #//table[@id\='contactList']//tr
