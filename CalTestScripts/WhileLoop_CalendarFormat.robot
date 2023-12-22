@@ -4,8 +4,9 @@
 Resource                 ../CalenResources/pncommon.robot
 Library                  DateTime
 Library                  String
-Library                  QWeb
+#Library                  QWeb
 Library                  QForce
+Library                    SeleniumLibrary
 Suite Setup              Setup Browser
 Suite Teardown           End suite
 
@@ -77,8 +78,8 @@ Get RecordCount from the Table
     [Tags]    GRecCount
     [Documentation]        Get the Record count from the table
     #${TableRecCount}=      GetTableRow    //table[@id\='contactList']//tr
-    UseTable               Item Number
-    ${count}=              get element count    //table[@id\='contactList']//tbody//tr
+    #et Matching Xpath Count
+   # ${count}=              get element count    //table[@id\='contactList']//tbody//tr
     Log                    Table Record count : ${count}    
     #//table[@id\='contactList']//tr
     #get element count
