@@ -4,9 +4,9 @@
 Resource                 ../CalenResources/pncommon.robot
 Library                  DateTime
 Library                  String
-#Library                  QWeb
+#Library                 QWeb
 Library                  QForce
-Library                    SeleniumLibrary
+Library                  SeleniumLibrary
 Suite Setup              Setup Browser
 Suite Teardown           End suite
 
@@ -75,11 +75,11 @@ Current To Previous Month display Calendar Format Xpath
     Log                  'Only Enable Calender Value : ' ${selectedMon}
 
 Get RecordCount from the Table
-    [Tags]    GRecCount
-    [Documentation]        Get the Record count from the table
-    #${TableRecCount}=      GetTableRow    //table[@id\='contactList']//tr
+    [Tags]               GRecCount
+    [Documentation]      Get the Record count from the table
+    #${TableRecCount}=                               GetTableRow                 //table[@id\='contactList']//tr
     #et Matching Xpath Count
-   # ${count}=              get element count    //table[@id\='contactList']//tbody//tr
-    Log                    Table Record count : ${count}    
+     ${count}=          get element count           //table[@id\='contactList']//tbody//tr
+    Log                  Table Record count : ${count}
     #//table[@id\='contactList']//tr
     #get element count
