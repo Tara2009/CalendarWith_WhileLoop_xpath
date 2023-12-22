@@ -80,6 +80,6 @@ Get RecordCount from the Table
     #Get Matching Xpath Count
     ${count}=           get element count           //table[@id\='contactList']//tbody//tr
     #${row}=               Get Count                 table[@id\='contactList']//tbody//tr
-    Log                  Table Record count : ${row}
+    Log                  Table Record count : ${count}
     #//table[@id\='contactList']//tr
     #get element count
