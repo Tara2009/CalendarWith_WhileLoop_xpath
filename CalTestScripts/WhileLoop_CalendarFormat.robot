@@ -77,6 +77,7 @@ Get RecordCount from the Table
     [Tags]    GRecCount
     [Documentation]        Get the Record count from the table
     #${TableRecCount}=      GetTableRow    //table[@id\='contactList']//tr
+    UseTable               Row Count
     ${count}=              get element count    //table[@id\='contactList']//tbody//tr
     Log                    Table Record count : ${count}    
     #//table[@id\='contactList']//tr
