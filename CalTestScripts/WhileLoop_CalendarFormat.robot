@@ -4,9 +4,8 @@
 Resource                 ../CalenResources/pncommon.robot
 Library                  DateTime
 Library                  String
-#Library                 QWeb
+Library                 QWeb
 Library                  QForce
-Library                  SeleniumLibrary
 Suite Setup              Setup Browser
 Suite Teardown           End suite
 
