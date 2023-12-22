@@ -80,6 +80,7 @@ Get RecordCount from the Table
     #${TableRecCount}=                               GetTableRow                 //table[@id\='contactList']//tr
     #Get Matching Xpath Count
     #${count}=            get element count           //table[@id\='contactList']//tbody//tr
+    UseTable             contactList
     ${row}                GetTableRow        table[@id\='contactList']//tbody//tr
     Log                  Table Record count : ${row}
     #//table[@id\='contactList']//tr
