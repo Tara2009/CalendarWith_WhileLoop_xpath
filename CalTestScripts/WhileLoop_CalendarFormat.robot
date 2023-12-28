@@ -77,12 +77,12 @@ Get RecordCount from the Table
     [Tags]               GRecCount
     [Documentation]      Get the Record count from the table
     #${TableRecCount}=                               GetTableRow                 //table[@id\='contactList']//tr
-    #Get Matching Xpath Count
+    #Get Matching Xpath Count                        //table[@id\='contactList']//tbody//tr
     #${count}=           get element count           //table[@id\='contactList']//tbody//tr
     #${row}=               Get Count                 table[@id\='contactList']//tbody//tr
     #Log                  Table Record count : ${count}
     #//table[@id\='contactList']//tr
-    #get element count
+    #get element count    //table[@id\='contactList']//tbody//tr
     UseTable             //table[@id\='contactList']//tbody//tr
-    ${rows}=             GetTableRow        //last        skip_header=True
+    ${rows}=             GetTableRow        //table[@id\='contactList']//tbody//tr        skip_header=True
     Log                  Table Row Count is : ${rows}
