@@ -84,5 +84,5 @@ Get RecordCount from the Table
     #//table[@id\='contactList']//tr
     #get element count                               //table[@id\='contactList']//tbody//tr
     UseTable             //table[@id\='contactList']//tbody//tr
-    ${rows}=             GetTableRow                 //table[@id\='contactList']                  skip_header=True
+    ${rows}=             GetTableRow                 //table[@id\='contactList']                             skip_header=True
     Log                  Table Row Count is : ${rows}
