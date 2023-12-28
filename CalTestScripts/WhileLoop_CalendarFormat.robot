@@ -83,6 +83,6 @@ Get RecordCount from the Table
     #Log                 Table Record count : ${count}
     #//table[@id\='contactList']//tr
     #get element count                               //table[@id\='contactList']//tbody//tr
-    UseTable             xpath\=//table[@id\='contactList']                    level=1
+    UseTable             xpath\=//table[@id\='contactList']                    level=2
     ${rows}=             GetTableRow                 //last                      skip_header=True
     Log                  Table Row Count is : ${rows}
