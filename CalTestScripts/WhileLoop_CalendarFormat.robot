@@ -19,7 +19,7 @@ ${DropYear}=             2015
 
 *** Test Cases ***
 Current To Next Month display Calendar Format Xpath
-    [Tags]               commitment
+    [Tags]               commitmentNext
     [Documentation]      Display current Month. System will click Next month button and select the date.
     Appstate             Home
     ClickText            Do not consent
@@ -47,7 +47,7 @@ Current To Next Month display Calendar Format Xpath
     Log                  'Only Enable Calender Value : ' ${selectedMon}
     #Sleep               3s
 Current To Previous Month display Calendar Format Xpath
-    [Tags]               commitment
+    [Tags]               commitmentprevious
     [Documentation]      Display current Month. System will click previous month button and select the date.
     Appstate             Home
     Log                  ${for30Day}
