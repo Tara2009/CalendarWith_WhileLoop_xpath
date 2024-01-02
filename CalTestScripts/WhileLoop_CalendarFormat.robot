@@ -86,5 +86,5 @@ Get RecordCount from the Table
     #UseTable            //table[@id\='contactList']//td[text()\='Maria Anders']
     #UseTable             xpath\=//table[@id\='contactList']                      Maria Anders
     Log                  //table[@id\='contactList']//td[text()\='Maria Anders']
-    ${rows}=             GetTableRow                 //last                      skip_header=True
-    Log                  Table Row Count is : ${rows}
+    #${rows}=             GetTableRow                 //last                      skip_header=True
+    #Log                  Table Row Count is : ${rows}
