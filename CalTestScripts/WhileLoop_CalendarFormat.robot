@@ -73,19 +73,3 @@ Current To Previous Month display Calendar Format Xpath
     Sleep                3s
     Log                  'Only Enable Calender Value : ' ${selectedMon}
 
-Get RecordCount from the Table
-    [Tags]               GRecCount
-    [Documentation]      Get the Record count from the table
-    #${TableRecCount}=                               GetTableRow                 //table[@id\='contactList']//tr
-    #Get Matching Xpath Count                        //table[@id\='contactList']//tbody//tr
-    #${count}=           get element count           //table[@id\='contactList']//tbody//tr
-    #${row}=             Get Count                   table[@id\='contactList']//tbody//tr
-    #Log                 Table Record count : ${count}
-    #//table[@id\='contactList']//tr
-    #get element count                               //table[@id\='contactList']//tbody//tr
-    #UseTable            //table[@id\='contactList']//td[text()\='Maria Anders']
-    #UseTable             xpath\=//table[@id\='contactList']                      Maria Anders
-    ${CellValue}=        GetText        //table[@id\='contactList']
-    Log                  ${CellValue}
-    #${rows}=             GetTableRow                 //last                      skip_header=True
-    #Log                  Table Row Count is : ${rows}
