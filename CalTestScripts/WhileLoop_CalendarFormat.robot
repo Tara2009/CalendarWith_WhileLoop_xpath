@@ -85,7 +85,7 @@ Get RecordCount from the Table
     #get element count                               //table[@id\='contactList']//tbody//tr
     #UseTable            //table[@id\='contactList']//td[text()\='Maria Anders']
     #UseTable             xpath\=//table[@id\='contactList']                      Maria Anders
-    ${CellValue}=        GetText        //table[@id\='contactList']//td[text()\='Maria Anders']
+    ${CellValue}=        GetText        //table[@id\='contactList']
     Log                  ${CellValue}
     #${rows}=             GetTableRow                 //last                      skip_header=True
     #Log                  Table Row Count is : ${rows}
